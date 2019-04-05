@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/description_place.dart';
-import 'review_list.dart';
-import 'header_app_bar.dart';
+import 'package:flutter_app/logic_trips.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -23,26 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: Scaffold(
-        body:
-          Stack(
-            children: <Widget>[
-              ListView(
-                children: <Widget>[
-                  DescriptionPlace("Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ", "Cancún",5),
-                  ReviewList()
-                ],
-              ),
-              HeaderAppBar()
-            ],
-          )
-            /*
-            Column(
-              children: <Widget>[
-                new ReviewList(),
-              ],
-            )*/
-      ),
+      home: LogicTrips()
     );
   }
 }
